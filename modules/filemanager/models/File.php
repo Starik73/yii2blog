@@ -4,6 +4,7 @@ namespace DeLuxis\Yii2SimpleFilemanager\models;
 
 use DeLuxis\Yii2SimpleFilemanager\SimpleFilemanagerModule;
 use yii\web\BadRequestHttpException;
+use Yii;
 
 /**
  * Class File
@@ -16,7 +17,7 @@ class File extends Item
 {
     public function getUrl()
     {
-        return \Yii::getAlias(SimpleFilemanagerModule::getInstance()->urlPath . $this->path);
+        return Yii::getAlias(SimpleFilemanagerModule::getInstance()->urlPath . $this->path);
     }
 
     public function getMime()

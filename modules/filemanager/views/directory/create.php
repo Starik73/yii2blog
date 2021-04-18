@@ -1,4 +1,3 @@
-<hr><hr><hr>
 <?php
 
 use yii\widgets\ActiveForm;
@@ -12,10 +11,8 @@ $this->title = Yii::t('filemanager', 'Create directory');
 if ( ! isset($this->params['breadcrumbs'])) {
     $this->params['breadcrumbs'] = [];
 }
-
 $this->params['breadcrumbs']   = array_merge($this->params['breadcrumbs'], $directory->getBreadcrumbs(false));
 $this->params['breadcrumbs'][] = $this->title;
-
 ?>
 
 <div class="row">
@@ -24,11 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php $form = ActiveForm::begin(); ?>
             <?= $form->field($model, 'path')->label(false)->hiddenInput(['value' => $model->path]) ?>
             <?= $form->field($model, 'name')->textInput() ?>
-
             <div class="form-group">
                 <?= \yii\helpers\Html::submitButton(\Yii::t('filemanager', 'Save'), ['class' => 'btn btn-success']) ?>
             </div>
-
             <?php ActiveForm::end(); ?>
         </div>
     </div>

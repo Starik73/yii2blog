@@ -5,9 +5,6 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -35,12 +32,9 @@ AppAsset::register($this);
     ?>
      
  
-    <div class="">
-        <?php // Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
-        <?php // Alert::widget() ?>
-
+    <div class="row">
+        <?php Alert::widget() ?>
         <?= $content ?>
-
     </div>
 
     <!-- ScrolltoTop -->

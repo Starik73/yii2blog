@@ -4,6 +4,7 @@ namespace app\modules\backend;
 
 use yii\filters\VerbFilter;
 use app\models\AccessRules;
+use yii\filters\AccessControl;
 
 /**
  * backend module definition class
@@ -29,7 +30,7 @@ class BackEndModule extends \yii\base\Module
             'filemanager' => [
                 'class' => 'DeLuxis\Yii2SimpleFilemanager\SimpleFilemanagerModule',
                 'as access' => [
-                    'class' => \yii\filters\AccessControl::className(),
+                    'class' => AccessControl::className(),
                     // We will override the default rule config with the new AccessRule class
                     'ruleConfig' => [
                         'class' => AccessRules::className(),
@@ -88,7 +89,7 @@ class BackEndModule extends \yii\base\Module
                 ],
             ],
             'access' => [
-                'class' => \yii\filters\AccessControl::className(),
+                'class' => AccessControl::className(),
                 // We will override the default rule config with the new AccessRule class
                 'ruleConfig' => [
                     'class' => AccessRules::className(),

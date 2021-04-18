@@ -4,6 +4,7 @@ namespace DeLuxis\Yii2SimpleFilemanager\models;
 
 use yii\base\InvalidCallException;
 use yii\base\Model;
+use Yii;
 
 /**
  * Class Item
@@ -27,7 +28,7 @@ class Item extends Model
     public function attributeLabels()
     {
         return [
-            'name' => \Yii::t('filemanager', 'Name')
+            'name' => Yii::t('filemanager', 'Name')
         ];
     }
 

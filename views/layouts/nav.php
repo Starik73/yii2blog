@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Url;
 ?>
 <!-- nav -->
@@ -33,13 +32,16 @@ use yii\helpers\Url;
                             <a href="<?= Url::toRoute('blog/blogs'); ?>">Блог</a>
                             <ul>
                                 <li><a href="<?= Url::toRoute('blog/view?id=1'); ?>">Статья №1</a></li>
-                                <li><a href="<?= Url::toRoute('site/signup'); ?>">Регистрация</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="<?= Url::toRoute('site/contact'); ?>">Обратная связь</a>
                         </li>
-                        <li class="btn"><a class="" href="<?= Url::toRoute('backend/') ?>">Админка</a></li>
+                        <?php if (Yii::$app->user->isGuest) { ?>
+                            <li class="btn"><a class="" href="<?= Url::toRoute('site/login') ?>">Вход</a></li>    
+                        <?php } else { ?>
+                            <li class="btn"><a class="" href="<?= Url::toRoute('backend/') ?>">Админка</a></li>
+                        <?php } ?>
                     </ul>
                 </nav>
             </div>

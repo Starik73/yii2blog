@@ -46,4 +46,17 @@ class ContactForm extends Model
 
         return true;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'name' => 'Имя отправителя:',
+            'email' => 'Адрес электронной почты:',
+            'subject' => 'Тема сообщения:',
+            'body' => 'Текст сообщения:',
+        ];
+    }
 }

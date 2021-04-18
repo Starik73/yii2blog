@@ -8,7 +8,7 @@
 
 namespace DeLuxis\Yii2SimpleFilemanager\models;
 
-
+use Yii;
 use yii\base\Model;
 
 /**
@@ -45,9 +45,9 @@ class DirectoryForm extends Model
     public function attributeLabels()
     {
         return [
-            'name' => \Yii::t('filemanager', 'Name'),
-            'newName' => \Yii::t('filemanager', 'New name'),
-            'path' => \Yii::t('filemanager', 'Path')
+            'name' => Yii::t('filemanager', 'Name'),
+            'newName' => Yii::t('filemanager', 'New name'),
+            'path' => Yii::t('filemanager', 'Path')
         ];
     }
 

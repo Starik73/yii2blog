@@ -1,17 +1,13 @@
-<?php
-
-/* @var $this yii\web\View */
-
-use yii\helpers\Html;
-
-$this->title = 'About';
-$this->params['breadcrumbs'][] = $this->title;
-?>
+{set title=$title}
+{use class="yii\helpers\Url"}
+{use class="yii\helpers\Html"}
+{use class="yii\widgets\Breadcrumbs"}
+{use class="yii\bootstrap\ActiveForm"}
 <!-- section about -->
 <section aria-label="about" class="whitepage no-bottom" id="about">
     <div class="container">
         <div class="row">
-
+            {Breadcrumbs::widget(['links' => $breadcrumbs])}
             <div class="col-md-5 col-xs-11">
                 <div class="onStep" data-animation="fadeInUp" data-time="300">
                     <article>

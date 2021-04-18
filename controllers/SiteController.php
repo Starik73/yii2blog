@@ -65,9 +65,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index.tpl', ['title' => 'Astashenkov']);
-
-        // return $this->render('index, ');
+        return $this->render('index.tpl', ['title' => 'Astashenkov, +79021290036']);
     }
 
     /**
@@ -117,8 +115,10 @@ class SiteController extends Controller
 
             return $this->refresh();
         }
-        return $this->render('contact', [
+        $breadcrumbs[] = ['label' => 'Форма обратной связи', 'url' => Url::toRoute('site/contact')];
+        return $this->render('contact.tpl', [
             'model' => $model,
+            'breadcrumbs' => $breadcrumbs,
         ]);
     }
 
@@ -129,7 +129,11 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about.tpl', ['title' => 'About us']);
+        $breadcrumbs[] = ['label' => 'Информация', 'url' => Url::toRoute('site/about')];
+        return $this->render('about.tpl', [
+            'title' => 'Информация, +79021290036',
+            'breadcrumbs' => $breadcrumbs,
+            ]);
     }
 
     /**
@@ -141,11 +145,16 @@ class SiteController extends Controller
     {
         $query = Banner::find();
         $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3]);
-        $breadcrumbs[] = ['label' => 'Projects', 'url' => Url::toRoute('site/project')];
+        $breadcrumbs[] = ['label' => 'Проекты', 'url' => Url::toRoute('site/project')];
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
-        return $this->render('project.tpl', compact('models', 'pages', 'breadcrumbs'));
+        return $this->render('project.tpl', [
+            'models' => $models, 
+            'pages' => $pages, 
+            'breadcrumbs' => $breadcrumbs, 
+            'title' => 'Работы',
+            ]);
     }
 
     /**

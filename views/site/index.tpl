@@ -1,3 +1,11 @@
+{set title=$title}
+{meta keywords="Yii,PHP,Smarty,framework"}
+{description}This is my page about Smarty extension{/description}
+
+{use class="yii\helpers\Url"}
+{use class="yii\helpers\Html"}
+{use class="yii\widgets\Breadcrumbs"}
+{use class="yii\bootstrap\ActiveForm"}
 <!-- home -->
 <section aria-label="home" class="mainbg" id="home">
     <!-- intro -->
@@ -6,7 +14,7 @@
             <div class="overlay-main v-align">
                 <div class="col-md-10 col-xs-11">
                     <h1 class="onStep" data-animation="animbouncefall" data-time="300">Личный сайт программиста. HTML,
-                        CSS, PHP, YII2</h1>
+                        CSS, JS, PHP, YII2</h1>
                     <div class="onStep" data-animation="fadeInUp" data-time="600" id="slidertext">
                         <h3 class="main-text">Адаптивная вестка</h3>
                         <h3 class="main-text">Современный фреймворк</h3>
@@ -45,7 +53,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home">
-                        <a href="project-detail.html">
+                    <a href="https://www.yiiframework.com" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/yii2.jpg">
                                 <div class="overlay">
@@ -60,7 +68,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home big-img">
-                        <a href="/img/gallery-home/big/img3.jpg">
+                    <a href="https://laravel.ru" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/lara.jpg">
                                 <div class="overlay">
@@ -75,7 +83,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home">
-                        <a href="project-detail.html">
+                    <a href="https://habr.com/ru/" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/habr.png">
                                 <div class="overlay">
@@ -90,7 +98,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home">
-                        <a href="project-detail.html">
+                        <a href="https://beget.com/ru" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/hosting.jpg">
                                 <div class="overlay">

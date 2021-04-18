@@ -5,6 +5,7 @@ namespace DeLuxis\Yii2SimpleFilemanager\models;
 
 use yii\base\Model;
 use yii\web\UploadedFile;
+use Yii;
 
 class UploadForm extends Model
 {
@@ -40,7 +41,7 @@ class UploadForm extends Model
     public function attributeLabels()
     {
         return [
-            'files' => \Yii::t('filemanager', 'Files')
+            'files' => Yii::t('filemanager', 'Files')
         ];
     }
 
@@ -49,9 +50,9 @@ class UploadForm extends Model
         $directory = Directory::createByPath($this->$attribute);
 
         if ( ! $directory->isExist) {
-            $this->addError($attribute, \Yii::t('filemanager', 'Is set to nonexistent path.'));
+            $this->addError($attribute, Yii::t('filemanager', 'Is set to nonexistent path.'));
         } elseif (is_file($directory->fullPath)) {
-            $this->addError($attribute, \Yii::t('filemanager', 'On the specified path there is a file.'));
+            $this->addError($attribute, Yii::t('filemanager', 'On the specified path there is a file.'));
         }
     }
 }

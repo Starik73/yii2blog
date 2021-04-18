@@ -3,6 +3,7 @@
 namespace DeLuxis\Yii2SimpleFilemanager;
 
 use yii\base\Module;
+use Yii;
 
 /**
  * Class SimpleFilemanagerModule
@@ -12,12 +13,12 @@ use yii\base\Module;
 class SimpleFilemanagerModule extends Module
 {
     public $controllerNamespace = 'DeLuxis\Yii2SimpleFilemanager\controllers';
-    public $uploadPath = '@webroot/uploads';
-    public $urlPath = '@web/uploads';
+    public $fullUploadPath = '@webroot/uploads';
+    public $urlPath = '@webroot/uploads';
 
     public $icons = [];
 
-    private $_uploadPath;
+    private $uploadPath;
 
     public $defaultIcons = [
         'dir'                => 'fa-folder-o',
@@ -40,8 +41,8 @@ class SimpleFilemanagerModule extends Module
 
         $this->icons = array_merge($this->defaultIcons, $this->icons);
 
-        if ( ! isset(\Yii::$app->i18n->translations['filemanager'])) {
-            \Yii::$app->i18n->translations['filemanager'] = [
+        if ( !isset(Yii::$app->i18n->translations['filemanager'])) {
+            Yii::$app->i18n->translations['filemanager'] = [
                 'class'          => 'yii\i18n\PhpMessageSource',
                 'sourceLanguage' => 'en-US',
                 'basePath'       => $this->basePath . '/messages',
@@ -52,16 +53,16 @@ class SimpleFilemanagerModule extends Module
 
     public function getFullUploadPath()
     {
-        if ( ! isset($this->_uploadPath)) {
-            $this->_uploadPath = \Yii::getAlias($this->uploadPath);
+        if ( !isset($this->uploadPath)) {
+            $this->uploadPath = Yii::getAlias($this->fullUploadPath);
         }
 
-        return $this->_uploadPath;
+        return $this->uploadPath;
     }
 
     private function _checkPath()
     {
-        if ( ! is_dir($this->fullUploadPath)) {
+        if ( !is_dir($this->fullUploadPath)) {
             mkdir($this->fullUploadPath, 0755, true);
         }
     }
