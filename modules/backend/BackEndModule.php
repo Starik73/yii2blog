@@ -5,33 +5,29 @@ namespace app\modules\backend;
 use yii\filters\VerbFilter;
 use app\models\AccessRules;
 use yii\filters\AccessControl;
+use yii\base\Module;
 
 /**
  * backend module definition class
  */
-class BackEndModule extends \yii\base\Module
+class BackEndModule extends Module
 {
     /**
      * {@inheritdoc}
      */
     public $controllerNamespace = 'app\modules\backend\controllers';
-
     public $uploadPath = '@webroot/uploads/images';
-
     public $urlPath = '@web/uploads/images';
-
     public $layout;
 
     public function init()
     {
         parent::init();
-
         $this->modules = [
             'filemanager' => [
                 'class' => 'DeLuxis\Yii2SimpleFilemanager\SimpleFilemanagerModule',
                 'as access' => [
                     'class' => AccessControl::className(),
-                    // We will override the default rule config with the new AccessRule class
                     'ruleConfig' => [
                         'class' => AccessRules::className(),
                     ],
