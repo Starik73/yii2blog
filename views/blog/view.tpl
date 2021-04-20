@@ -1,11 +1,11 @@
+{use class="yii\helpers\Html"}
+{use class="yii\helpers\Url"}
+{use class="yii\web\YiiAsset"}
+{set title=$model.title}
 <!-- section -->
 <section aria-label="section-blogg" id="content">
     <div class="container">
         <div class="row">
-            {use class="yii\helpers\Html"}
-            {use class="yii\helpers\Url"}
-            {use class="yii\web\YiiAsset"}
-            {set title=$model.title}
             <!-- left content -->
             <div class="col-md-8">
                 <div class="onStep" data-animation="fadeInUp" data-time="300">
@@ -13,9 +13,10 @@
                     <article>
                         <div class="blog-simple m-3 p-3">
                             <blockquote>
-                                <p><a class="" href="{Yii::$app->homeUrl}">Home</a> / <a class=""
-                                        href="{Url::toRoute('blog/blogs')}">Blogs</a> / <a class=""
-                                        href="">{$model.title}</a></p>
+                                <p><a class="" href="{Yii::$app->homeUrl}">Home</a> 
+                                 / <a class="" href="{Url::toRoute('blog/blogs')}">Blogs</a> 
+                                 / <a class="" href="">{$model.title}</a>
+                                </p>
                             </blockquote>
                             <img class="img-responsive m-2" src="/{$model.blog_img}" alt="">
                             <div class="blog-text">
