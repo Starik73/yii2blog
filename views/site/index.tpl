@@ -53,7 +53,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home">
-                    <a href="https://www.yiiframework.com" target="_blank">
+                        <a href="https://www.yiiframework.com" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/yii2.jpg">
                                 <div class="overlay">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home big-img">
-                    <a href="https://laravel.ru" target="_blank">
+                        <a href="https://laravel.ru" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/lara.jpg">
                                 <div class="overlay">
@@ -83,7 +83,7 @@
                 </div>
                 <div class="item">
                     <div class="gal-home">
-                    <a href="https://habr.com/ru/" target="_blank">
+                        <a href="https://habr.com/ru/" target="_blank">
                             <div class="hovereffect">
                                 <img alt="imageportofolio" class="img-responsive" src="/img/habr.png">
                                 <div class="overlay">
@@ -122,8 +122,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="wrap-news onStep" data-animation="fadeInLeft" data-time="300">
-                    <img alt="imageportofolio" class="img-responsive" src="/img/logos/html5.jpg">
+                <div class="center-block wrap-news onStep m-3 p-3 mx-auto" data-animation="fadeInLeft" data-time="300">
+                    <img alt="imageportofolio" class="img-rounded img-responsive" src="/img/logos/html5.jpg">
                     <h3>HTML</h3>
                     <p>
                         HTML5 — это не продолжатель языка разметки гипертекста, а новая открытая платформа,
@@ -137,8 +137,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="wrap-news onStep" data-animation="fadeInRight" data-time="600">
-                    <img alt="imageportofolio" class="img-responsive" src="/img/logos/css.jpg">
+                <div class="wrap-news onStep m-3 p-3 mx-auto" data-animation="fadeInRight" data-time="600">
+                    <img alt="imageportofolio" class="img-rounded img-responsive" src="/img/logos/css.jpg">
                     <h3>CSS</h3>
                     <p>
                         CSS (Cascading Style Sheets) — язык таблиц стилей, который позволяет прикреплять стиль
@@ -152,8 +152,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="wrap-news onStep" data-animation="fadeInRight" data-time="900">
-                    <img alt="imageportofolio" class="img-responsive" src="/img/logos/js.jpg">
+                <div class="wrap-news onStep m-3 p-3 mx-auto" data-animation="fadeInRight" data-time="900">
+                    <img alt="imageportofolio" class="img-rounded img-responsive" src="/img/logos/js.jpg">
                     <h3>JS</h3>
                     <p>
                         JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае
@@ -175,11 +175,11 @@
 <section class="yellowpage">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
-                <h2>Остались неразрешенные вопросы ?</h2>
+            <div class="col-md-6 m-3 p-3">
+                <h2 class="text-center">Остались неразрешенные вопросы ?</h2>
             </div>
-            <div class="col-md-5">
-                <div class="right">
+            <div class="col-md-4 m-3 p-3">
+                <div class="center-block">
                     <div class="btn-content">
                         <a class="link-class" href="mailto:stariktz@gmail.com">Задавайте :)</a>
                     </div>
