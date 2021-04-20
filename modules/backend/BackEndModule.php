@@ -57,7 +57,7 @@ class BackEndModule extends Module
             ]
         ];
 
-        $this->layout = 'base';
+        $this->layout = 'main';
     }
 
     public function actions()
