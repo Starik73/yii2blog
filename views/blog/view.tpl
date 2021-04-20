@@ -11,7 +11,7 @@
                 <div class="onStep" data-animation="fadeInUp" data-time="300">
                     <!-- article -->
                     <article>
-                        <div class="blog-simple">
+                        <div class="blog-simple m-3 p-3">
                             <blockquote>
                                 <p><a class="" href="{Yii::$app->homeUrl}">Home</a> / <a class=""
                                         href="{Url::toRoute('blog/blogs')}">Blogs</a> / <a class=""
@@ -41,7 +41,7 @@
                 <aside class="onStep" data-animation="fadeInUp" data-time="600">
 
                     <!-- widget -->
-                    <div class="widget">
+                    <div class="widget m-3 p-3">
                         <h5>
                            Недавние посты:
                         </h5>
@@ -64,7 +64,7 @@
                     <!-- widget end -->
 
                     <!-- widget -->
-                    <div class="widget">
+                    <div class="widget m-3 p-3">
                         <h5>
                             Php программист кто это
                         </h5>

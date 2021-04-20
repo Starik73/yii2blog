@@ -1,11 +1,11 @@
+{use class="yii\helpers\Html"}
+{use class="yii\helpers\Url"}
+{use class="yii\web\YiiAsset"}
+{set title='Blogs'}
 <!-- section -->
 <section aria-label="section-blogg" id="content">
     <div class="container">
         <div class="row">
-            {use class="yii\helpers\Html"}
-            {use class="yii\helpers\Url"}
-            {use class="yii\web\YiiAsset"}
-            {set title='Blogs'}
             <!-- left content -->
             <div class="col-md-8">
                 <div class="onStep" data-animation="fadeInUp" data-time="300">
@@ -14,7 +14,7 @@
                                 href="{Url::toRoute('blog/blogs')}">Blogs</a></p>
                     </blockquote>
                     {foreach from=$models item=$item}
-                        <div class="blog-simple">
+                        <div class="blog-simple m-3 p-3">
                             <a href='{Url::toRoute("blog/view?id={$item->id}")}'><img class="img-responsive"
                                     src="/{$item.blog_img}" alt=""></a>
                             <div class="blog-text">
@@ -38,7 +38,7 @@
                 <aside class="onStep" data-animation="fadeInUp" data-time="600">
 
                     <!-- widget -->
-                    <div class="widget">
+                    <div class="widget m-3 p-3">
                         <h5>
                            Недавние посты:
                         </h5>
@@ -61,7 +61,7 @@
                     <!-- widget end -->
 
                     <!-- widget -->
-                    <div class="widget">
+                    <div class="widget m-3 p-3">
                         <h5>
                             Php программист кто это
                         </h5>
