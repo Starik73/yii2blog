@@ -31,16 +31,14 @@ use yii\helpers\Url;
                         <li>
                             <a href="<?= Url::toRoute('blog/blogs'); ?>">Блог</a>
                             <ul>
-                                <li><a href="<?= Url::toRoute('blog/view?id=1'); ?>">Статья №1</a></li>
+                                <li><a href="<?= Url::toRoute('blog/view/1'); ?>">Программирование — это сложно</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="<?= Url::toRoute('site/contact'); ?>">Обратная связь</a>
                         </li>
-                        <?php if (Yii::$app->user->isGuest) { ?>
-                            <li class="btn"><a class="" href="<?= Url::toRoute('site/login') ?>">Вход</a></li>    
-                        <?php } else { ?>
-                            <li class="btn"><a class="" href="<?= Url::toRoute('backend/') ?>">Админка</a></li>
+                        <?php if (!Yii::$app->user->isGuest) { ?>
+                            <li class="btn"><a class="" href="<?= Url::toRoute('backend/') ?>">Админка</a></li>  
                         <?php } ?>
                     </ul>
                 </nav>

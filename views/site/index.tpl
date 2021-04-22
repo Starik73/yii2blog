@@ -1,7 +1,6 @@
 {set title=$title}
 {meta keywords="Yii,PHP,Smarty,framework"}
 {description}This is my page about Smarty extension{/description}
-
 {use class="yii\helpers\Url"}
 {use class="yii\helpers\Html"}
 {use class="yii\widgets\Breadcrumbs"}

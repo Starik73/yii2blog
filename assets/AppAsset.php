@@ -20,7 +20,6 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
         'css/animated-on3step.css',
         'css/owl.carousel.css',
         'css/owl.theme.css',
@@ -33,6 +32,7 @@ class AppAsset extends AssetBundle
         'rs-plugin/css/settings.css',
         'css/rev-settings.css',
         'css/bootstrap.min.css',
+        'css/site.css',
     ];
     public $js = [
         'js/map-1.js',

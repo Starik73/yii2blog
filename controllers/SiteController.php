@@ -65,7 +65,35 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index.tpl', ['title' => 'Astashenkov, +79021290036']);
+        $title = 'Astashenkov SITE, +79021290036';
+        $description = 'Блог самодостаточного программиста';
+        $img_url = "@web/img/logo.png";
+        Yii::$app->seo->putFacebookMetaTags([
+            'og:url'        => Url::canonical(),
+            'og:type'       => 'website',
+            'og:title'      => $title,
+            'og:description'=> $description,
+            'og:image'      => Url::to($img_url, true),
+            'fb:app_id'     => '1811670458869631',//для статистики по переходам
+        ]);
+        
+        Yii::$app->seo->putTwitterMetaTags([
+            'twitter:site'        => Url::canonical(),
+            'twitter:title'       => $title,
+            'twitter:description' => $description,
+            'twitter:creator'     => 'Astashenkov',
+            'twitter:image:src'   => Url::to($img_url, true),
+            'twitter:card'        => 'summary',
+
+        ]);
+        
+        Yii::$app->seo->putGooglePlusMetaTags([
+            'name'       => $title,
+            'description'=> $description,
+            'image'      => Url::to($img_url, true),
+            
+        ]);
+        return $this->render('index.tpl', ['title' => $title]);
     }
 
     /**

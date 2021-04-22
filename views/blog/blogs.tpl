@@ -1,38 +1,35 @@
+{set title='Blogs, Astashenkov, +79021290036'}
 {use class="yii\helpers\Html"}
 {use class="yii\helpers\Url"}
 {use class="yii\web\YiiAsset"}
-{set title='Blogs'}
+{use class="yii\widgets\Breadcrumbs"}
+{use class="yii\bootstrap\ActiveForm"}
 <!-- section -->
 <section aria-label="section-blogg" id="content">
     <div class="container">
         <div class="row">
+            {Breadcrumbs::widget(['links' => $breadcrumbs])}
             <!-- left content -->
             <div class="col-md-8">
                 <div class="onStep" data-animation="fadeInUp" data-time="300">
-                    <blockquote>
-                        <p><a class="" href="{Yii::$app->homeUrl}">Home</a> / <a class=""
-                                href="{Url::toRoute('blog/blogs')}">Blogs</a></p>
-                    </blockquote>
                     {foreach from=$models item=$item}
                         <div class="blog-simple m-3 p-3">
-                            <a href='{Url::toRoute("blog/view?id={$item->id}")}'><img class="img-responsive"
+                            <a href='{Url::toRoute("blog/view/{$item->id}")}'><img class="img-responsive"
                                     src="/{$item.blog_img}" alt=""></a>
                             <div class="blog-text">
-                                <h3><a href='{Url::toRoute("blog/view?id={$item->id}")}'>{$item.title}</a></h3>
+                                <h3><a href='{Url::toRoute("blog/view/{$item->id}")}'>{$item.title}</a></h3>
                                 <span class="user-post"><i class="ti-user"></i>{$item.author}</span>
                                 <span class="date-post"><i class="ti-calendar"></i>{$item.updated_at}</span>
                                 <p>{$item.description}</p>
-                                <a class="btn-blog" href='{Url::toRoute("blog/view?id={$item->id}")}'>More Detail</a>
+                                <a class="btn-blog" href='{Url::toRoute("blog/view/{$item->id}")}'>Подробнее</a>
                             </div>
                         </div>
                     {/foreach}
-
                     <!-- Smaller pagination -->
                     {LinkPager::widget(['pagination' => $pages])}
                 </div>
             </div>
             <!-- left content end -->
-
             <!-- right content -->
             <div class="col-md-4">
                 <aside class="onStep" data-animation="fadeInUp" data-time="600">
@@ -49,11 +46,9 @@
                             <div>
                                 <img alt="#" class="pull-left" src="/img/blog/65x65/thumb1.jpg">
                                 <h6>
-                                <a href='{Url::toRoute("blog/view/{$item->id}")}'>{$item.title}</a>
+                                    <a href='{Url::toRoute("blog/view/{$item->id}")}'>{$item.title}</a>
                                 </h6>
-                                <p>
-                                    {$item.description}
-                                </p>
+                                <p>{$item.description}</p>
                             </div>
                         {/foreach}
                         </div>

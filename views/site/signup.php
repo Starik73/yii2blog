@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="row">
             <div class="site-signup">
-                <div class="row">
+                <div class="row  m-3 p-3">
                 <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
                     <div class="col-lg-3"></div>
                     <div class="col-lg-6 bg-info">

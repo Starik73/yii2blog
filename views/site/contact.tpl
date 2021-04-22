@@ -13,7 +13,7 @@
 
                 <!-- contact form -->
                 <div class="col-md-8 col-sm-7 m-2">
-                    <div class="panel panel-default well">
+                    <div class="panel panel-default well m-3 p-3">
                         <h1>Оставить сообщение:</h1>
 
                         {if Yii::$app->session->hasFlash('contactFormSubmitted')}

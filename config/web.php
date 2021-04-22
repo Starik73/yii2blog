@@ -20,6 +20,9 @@ $config = [
         ],
     ],
     'components' => [
+        'seo' => [
+            'class' => 'app\components\SeoComponent',
+        ],
         'view' => [
             'class' => 'yii\web\View',
             'renderers' => [

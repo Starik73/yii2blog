@@ -9,13 +9,13 @@
         <div class="row">
             {Breadcrumbs::widget(['links' => $breadcrumbs])}
             <div class="col-md-5 col-xs-11">
-                <div class="onStep" data-animation="fadeInUp" data-time="300">
+                <div class="onStep  m-3 p-3" data-animation="fadeInUp" data-time="300">
                     <article>
                         <h2>
                             Программист
                         </h2>
                         <span class="devider-cont"></span>
-                        <p>
+                        <p class="text-justify">
                             <em>
                                 Программи́ст — специалист, занимающийся программированием, то есть созданием
                                 компьютерных программ.
@@ -34,30 +34,32 @@
             <!-- text end -->
             <!-- col -->
             <div class="col-md-7 col-xs-11">
-                <div class="onStep" data-animation="fadeInUp" data-time="600">
+                <div class="onStep m-3 p-3" data-animation="fadeInUp" data-time="600">
                     <div class="filter-wraper">
-                        <ul class="animfadeInUpBig" data-time="1200" id="filters">
-                            <li class="filt-serv selected" data-filter=".passion">
-                                HTML5
-                            </li>
-                            <li class="space">•
-                            </li>
-                            <li class="filt-serv" data-filter=".honcap">
-                                JavaScript
-                            </li>
-                            <li class="space">•
-                            </li>
-                            <li class="filt-serv" data-filter=".webuild">
-                                CSS (Cascading Style Sheets)
-                            </li>
+                        <ul class="animfadeInUpBig btn-toolbar" data-time="1200" id="filters">
+                            <button class="btn btn-default">
+                                <li class="filt-serv selected" data-filter=".passion">
+                                    HTML5
+                                </li>
+                            </button>
+                            <button class="btn btn-default">
+                                <li class="filt-serv" data-filter=".honcap">
+                                    JavaScript
+                                </li>
+                            </button>
+                            <button class="btn btn-default">
+                                <li class="filt-serv" data-filter=".webuild">
+                                    CSS (Cascading Style Sheets)
+                                </li>
+                            </button>
                         </ul>
                     </div>
                     <div class="space-half">
                     </div>
                 </div>
-                <div class="onStep" data-animation="fadeInUp" data-time="900" id="services">
-                    <div class="service passion">
-                        <img alt="img" class="img-responsive"  src="/img/logos/html5.jpg">
+                <div class="onStep m-3 p-3" data-animation="fadeInUp" data-time="900" id="services">
+                    <div class="service passion text-justify">
+                        <img alt="img" class="img-responsive" src="/img/logos/html5.jpg">
                         <h4>
                             HTML5
                         </h4>
@@ -67,7 +69,7 @@
                             многое другое.
                         </p>
                     </div>
-                    <div class="service honcap">
+                    <div class="service honcap text-justify">
                         <img alt="img" class="img-responsive" src="/img/logos/js.jpg">
                         <h4>
                             JavaScript
@@ -79,8 +81,8 @@
                             что вы буквально в считанных секундах от своей первой JavaScript-программы.
                         </p>
                     </div>
-                    <div class="service webuild">
-                        <img alt="img" class="img-responsive"  src="/img/logos/css.jpg">
+                    <div class="service webuild text-justify">
+                        <img alt="img" class="img-responsive" src="/img/logos/css.jpg">
                         <h4>
                             CSS (Cascading Style Sheets)
                         </h4>

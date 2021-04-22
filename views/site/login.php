@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
         <div class="col-md-2"></div>
         <div class="col-md-8 card">
-            <div class="card-content">
+            <div class="card-content m-3 p-3">
                 <h4 class="text-center"> <b> ОСТАВЬ НАДЕЖДУ ВСЯК СЮДА ВХОДЯЩИЙ: </b> </h4>
                 <hr>
                 <?php $form = ActiveForm::begin([
