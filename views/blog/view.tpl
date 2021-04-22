@@ -53,7 +53,7 @@
                             <div>
                                 <img alt="#" class="pull-left" src="/img/blog/65x65/thumb1.jpg">
                                 <h6>
-                                <a href='{Url::toRoute("blog/view?id={$item->id}")}'>{$item.title}</a>
+                                <a href='{Url::toRoute("blog/view/{$item->id}")}'>{$item.title}</a>
                                 </h6>
                                 <p>
                                     {$item.description}

@@ -4,7 +4,8 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'id' => 'basic-console',
+    'id' => 'astashenkov-console',
+    'language' => 'ru-RU',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
@@ -14,9 +15,9 @@ $config = [
         '@tests' => '@app/tests',
     ],
     'components' => [
-        // 'cache' => [
-        //     'class' => 'yii\caching\FileCache',
-        // ],
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
+        ],
         'log' => [
             'targets' => [
                 [
@@ -46,9 +47,9 @@ $config = [
                 'password' => 'root',
             ],
         ],
-        // 'fixture' => [ // Fixture generation command line.
-        //     'class' => 'yii\faker\FixtureController',
-        // ],
+        'fixture' => [ // Fixture generation command line.
+            'class' => 'yii\faker\FixtureController',
+        ],
     ],
 
 ];

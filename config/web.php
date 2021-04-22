@@ -4,7 +4,8 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'id' => 'basic',
+    'id' => 'astashenkov',
+    'language' => 'ru-RU',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
@@ -32,7 +33,7 @@ $config = [
                             'LinkPager' => '\yii\widgets\LinkPager',
                         ],
                     ],
-                    // 'cachePath' => '@runtime/Smarty/cache',
+                    'cachePath' => '@runtime/Smarty/cache',
                 ],
             ],
         ],
@@ -40,9 +41,9 @@ $config = [
             'cookieValidationKey' => 'BqJeLoqa1yEU5kPSKs6nAfR42Mys-sXZ',
             'baseUrl' => '',
         ],
-        // 'cache' => [
-        //     'class' => 'yii\caching\FileCache',
-        // ],
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
+        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
@@ -72,6 +73,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'backend' => 'backend/dashboard/index',
+                '<controller>/<action>/<id:\d+>' => '<controller>/<action>',
             ],
         ],
         'authManager' => [
